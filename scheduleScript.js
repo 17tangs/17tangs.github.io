@@ -1,6 +1,9 @@
-var n = '${name}';
-console.log(n);
+var _ = require("lodash");
 
+console.log(_);
+
+let array = [1,2,3,4,5,6,7,8];
+console.log(_.without(array, 3));
 function displayDetails(c,d) {
 	var classes = document.getElementsByClassName(c);
 	for (var i = 0; i < classes.length; i++) {
