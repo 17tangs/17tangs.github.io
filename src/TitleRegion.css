@@ -1,0 +1,14 @@
+.titleRegion{
+  height:10%;
+  margin:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.titleRegionText{
+  font-family: "bebas_neueregular";
+  color:white;
+  margin:0px;
+	padding:0px;
+	background-color:rgba(0,0,0,0);
+}
