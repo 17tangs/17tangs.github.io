@@ -1,31 +1,29 @@
 import React, { Component } from  'react';
+import Hours from './Hours'
+import './Schedule.css'
 
 class Schedule extends Component{
   hourBounds = () =>{
-    let st = 24;
     let et = 0;
     this.props.sd.forEach((subject) => {
       subject.slots.forEach((time) => {
-        if(time.start < st){
-          st = time.start;
-        }
         if(time.end > et){
           et = time.end;
         }
       })
     });
-    return [st,et];
+    return et;
   }
   render(){
-    let st = this.hourBounds()[0];
-    let et = this.hourBounds()[1];
+    let et = this.hourBounds();
+    et = 19;
+    let height = (et-8)*50;
+    let numHours = et-8>7 ? et-8 : 7;
     let {sd} = this.props;
-    console.log(st, et);
     return(
-      <div className="Schedule-container">
-        <div className="Schedule">
-
-
+      <div className="scheduleContainer">
+        <div className="schedule" style = {{height: `${height}px`}}>
+          <Hours num = {numHours}/>
         </div>
       </div>
     );

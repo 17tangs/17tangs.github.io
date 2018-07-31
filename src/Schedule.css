@@ -1,0 +1,12 @@
+.scheduleContainer{
+  height:82%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  overflow:auto;
+}
+.schedule{
+  min-width:905px;
+  min-height:500px;
+  background: white;
+}

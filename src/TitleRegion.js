@@ -4,8 +4,8 @@ import './TitleRegion.css';
 class TitleRegion extends Component{
   render(){
     return(
-      <div className="titleRegion f1">
-        <div className="titleRegionText">Schedule</div>
+      <div className="titleRegion">
+        <div className="titleRegionText"><h1>Schedule</h1></div>
       </div>
     );
   }
