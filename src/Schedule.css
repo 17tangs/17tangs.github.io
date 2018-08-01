@@ -6,7 +6,7 @@
   overflow:auto;
 }
 .schedule{
+  border:1px solid white;
   min-width:905px;
-  min-height:500px;
-  background: white;
+  min-height:350px;
 }

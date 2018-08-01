@@ -1,5 +1,6 @@
 import React, { Component } from  'react';
-import Hours from './Hours'
+import HourContainer from './HourContainer';
+import DayContainer from './DayContainer';
 import './Schedule.css'
 
 class Schedule extends Component{
@@ -16,14 +17,16 @@ class Schedule extends Component{
   }
   render(){
     let et = this.hourBounds();
-    et = 19;
+    et = 18;
     let height = (et-8)*50;
     let numHours = et-8>7 ? et-8 : 7;
     let {sd} = this.props;
     return(
       <div className="scheduleContainer">
-        <div className="schedule" style = {{height: `${height}px`}}>
-          <Hours num = {numHours}/>
+        <div className="schedule">
+            {/* // style = {{height: `${height}px`}}> */}
+          <HourContainer num = {numHours}/>
+          {/* <DayContainer schedule = {sd}/> */}
         </div>
       </div>
     );

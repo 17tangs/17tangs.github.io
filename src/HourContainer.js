@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import './Hours.css'
+import Hour from './Hour'
+import './HourContainer.css'
 
-class Hours extends Component{
+class HourContainer extends Component{
   generateHour = () =>{
-      console.log(this.props);
       const Hours = [];
+      Hours.push(<Hour time={-1}/>);
       for(let i = 0; i<this.props.num; i++){
-        Hours.push(<Hour time={i}/> );
+        Hours.push(<Hour time={8+i}/> );
       }
       return Hours;
   }
   render(){
     return(
-        <div className = "HourContainer">
+        <div className="hourContainer">
           {this.generateHour()}
         </div>
     );
   }
 }
 
-export default Hours;
+export default HourContainer;

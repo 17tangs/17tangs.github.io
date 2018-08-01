@@ -6,10 +6,23 @@ const ScheduleData = [
     slots: [{
       start:11,
       end:12,
-      day: 0,
+      day: 1,
       professor: c1prof,
       location: c1loc
-    }]
+      },{
+      start:11,
+      end:12,
+      day: 3,
+      professor: c1prof,
+      location: c1loc
+      },{
+      start:11,
+      end:12,
+      day: 5,
+      professor: c1prof,
+      location: c1loc
+      },
+    ]
   }
 ];
 export {ScheduleData};
