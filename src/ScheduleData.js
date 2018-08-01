@@ -10,6 +10,7 @@ const c5prof = "Hamilton, P.";
 const c5loc = "Knudsen 1238";
 const ScheduleData = [
   {
+    id:1,
     name: "MATH 131AH",
     slots: [{
       start:11,
@@ -34,6 +35,7 @@ const ScheduleData = [
       type: "lecture"
     }]
   },{
+    id:2,
     name:"CS 35L",
     slots:[{
         start:12,
@@ -52,6 +54,7 @@ const ScheduleData = [
     }
    ]
 },{
+    id:3,
     name:"CS M51A",
     slots: [{
         start:8,
@@ -70,6 +73,7 @@ const ScheduleData = [
     }
 ]
 },{
+    id:4,
     name: "CS 180",
     slots:[{
         start:10,
@@ -88,6 +92,7 @@ const ScheduleData = [
     }
 ]
 },{
+    id:5,
     name: "PHYSICS 4AL",
     slots:[{
         start:12,

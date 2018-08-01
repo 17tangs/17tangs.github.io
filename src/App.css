@@ -1,4 +1,4 @@
-html, body, #root, .App{
+#root, .App{
   padding:0px;
   margin:0px;
   height:100%;

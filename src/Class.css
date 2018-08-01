@@ -1,1 +1,30 @@
-
+.class{
+	position: absolute;
+    color:white;
+	width: 100%;
+	border: 2px solid var(--main-bg-color);
+	transform: scale(1);
+	transition: transform 250ms ease-in-out;
+}
+.classText {
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+	font-family: 'bebas_neueregular', serif;
+	font-size: 150%;
+}
+.classHidden{
+    background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	text-align: right;
+	bottom: 3px;
+	right: 0;
+	font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+	font-size: 90%;
+}
+.classHover{
+	transform: scale(0.98);
+	transition: transform 250ms ease-in-out;
+}

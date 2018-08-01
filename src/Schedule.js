@@ -13,7 +13,7 @@ class Schedule extends Component{
         }
       })
     });
-    return et;
+    return et+1;
   }
   render(){
     let et = this.hourBounds();

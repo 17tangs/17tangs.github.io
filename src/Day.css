@@ -1,7 +1,11 @@
 .day {
 	width: 20%;
 	height: 100%;
-	background-color: #25201B;
+	background-color:var(--main-bg-color);
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    align-items:center;
 }
 
 .dayTextContainer {

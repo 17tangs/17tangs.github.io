@@ -1,5 +1,16 @@
 html {
-  height:100%;
+    --main-bg-color: #25201B;
+    --c1: #3F51B5;
+    --c1Hover: #313F8C;
+    --c2:#F44336;
+    --c2Hover: #8C251D;
+    --c3: #009688;
+    --c3Hover: #008C7E;
+    --c4: #FF9800;
+    --c4Hover: #A66300;
+    --c5: #673AB7;
+    --c5Hover: #502D8C;
+    height:100%;
 }
 body {
 	display:flex;
@@ -8,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #25201B;
+  background-color: var(--main-bg-color);
   width:100%;
   height:100%;
 }

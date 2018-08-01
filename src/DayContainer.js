@@ -10,11 +10,14 @@ class DayContainer extends Component{
             this.props.schedule.forEach((subject) => {
                 subject.slots.forEach((slot) => {
                     if(slot.day === day){
-                        meeting.push({name:`${subject.name}`,
-                                start:`${slot.start}`,
-                                end:`${slot.end}`,
-                                prof:`${slot.professor}`,
-                                loc:`${slot.location}`})
+                        meeting.push({
+                                id:     `${subject.id}`,
+                                name:   `${subject.name}`,
+                                start:  `${slot.start}`,
+                                end:    `${slot.end}`,
+                                prof:   `${slot.professor}`,
+                                loc:    `${slot.location}`
+                        })
                     }
                 })
             })
@@ -26,7 +29,7 @@ class DayContainer extends Component{
     generateDays = () => {
         let dayData = this.genDayData();
         let days = ['M', 'T', 'W', 'R', 'F'];
-        let dayHTML = dayData.map((day,i) => <Day dayText = {days[i]} slots = {day}/>);
+        let dayHTML = dayData.map((day,i) => <Day key = {i} dayText = {days[i]} slots = {day}/>);
         return dayHTML;
     }
     render(){
