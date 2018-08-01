@@ -11,7 +11,7 @@ class Hour extends Component{
     render(){
         let time = this.AmPm();
         return(
-            <div className="hour">
+            <div className="hour" style = {{height:`${100/(this.props.numHours+1)}%`}}>
                 <div className="hourText">
                     {time}
                 </div>

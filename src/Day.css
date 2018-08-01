@@ -1,0 +1,23 @@
+.day {
+	width: 20%;
+	height: 100%;
+	background-color: #25201B;
+}
+
+.dayTextContainer {
+	position: relative;
+	top: 0px;
+	width: 171px;
+	height: 50px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.dayText {
+    color:white;
+	position: absolute;
+	bottom: 0px;
+	left: 80px;
+	font-family: 'bebas_neueregular';
+	font-size: 150%;
+}

@@ -2,11 +2,9 @@
   height:82%;
   display:flex;
   justify-content:center;
-  align-items: center;
   overflow:auto;
 }
 .schedule{
-  border:1px solid white;
-  min-width:905px;
-  min-height:350px;
+  width:905px;
+  display:flex;
 }

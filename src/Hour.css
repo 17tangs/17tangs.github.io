@@ -1,15 +1,13 @@
 .hour {
-	border:1px solid green;
 	position: relative;
-	width: 30px;
-	height: 50px;
+	width: 100%;
 	background-color: #25201B;
 }
 
 .hourText {
 	position: absolute;
 	top: 2px;
-	right: 2px;
+	right: 5px;
 	font-family: 'bebas_neueregular';
 	background-color: #25201B;
 	color: white;

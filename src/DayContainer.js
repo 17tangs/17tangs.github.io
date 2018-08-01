@@ -3,11 +3,31 @@ import Day from './Day'
 import './DayContainer.css'
 
 class DayContainer extends Component{
+
+    genDayData = () => {
+        let dayData = [1,2,3,4,5].map((day) => {
+            let meeting = [];
+            this.props.schedule.forEach((subject) => {
+                subject.slots.forEach((slot) => {
+                    if(slot.day === day){
+                        meeting.push({name:`${subject.name}`,
+                                start:`${slot.start}`,
+                                end:`${slot.end}`,
+                                prof:`${slot.professor}`,
+                                loc:`${slot.location}`})
+                    }
+                })
+            })
+            return meeting;
+        });
+        return dayData;
+    }
+
     generateDays = () => {
-        let days = [];
-        for(let i = 0; i < 5; i++){
-            days.push(<Day slots={1}/>);
-        }
+        let dayData = this.genDayData();
+        let days = ['M', 'T', 'W', 'R', 'F'];
+        let dayHTML = dayData.map((day,i) => <Day dayText = {days[i]} slots = {day}/>);
+        return dayHTML;
     }
     render(){
         return(
