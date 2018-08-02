@@ -25,6 +25,7 @@ class Schedule extends Component{
         <div className="schedule" style = {{height: `${height}px`}}>
           <HourContainer num = {numHours} />
           <DayContainer schedule = {sd}/>
+          <HourContainer num = {0} />
         </div>
       </div>
     );

@@ -10,10 +10,17 @@ class SearchBar extends Component {
         let t = event.type === 'focus' ? 'scaleX(1)' : 'scaleX(0)';
         this.setState({transform:`${t}`});
     }
+    handleBlur = (event) =>{
+        this.focus(event);
+        this.props.blur(event);
+    }
+    componentDidMount(){
+        this.nameInput.focus();
+    }
     render(){
         return(
             <div className='searchBarContainer'>
-                <input className= 'searchBar' onFocus={this.focus} onBlur={this.focus} onChange={this.props.searchChange} type='text' placeholder = 'search class' />
+                <input ref={(input) => {this.nameInput = input; }} value = {this.state.init} className= 'searchBar' onFocus={this.focus} onBlur={this.handleBlur} onChange={this.props.searchChange} type='text' placeholder = 'search' />
 			    <div id = "bord1" style  = {{transform:`${this.state.transform}`}}></div>
             </div>
         );
