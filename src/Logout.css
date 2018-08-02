@@ -3,7 +3,7 @@
   margin-top:5px;
 	font-family: 'Open Sans Condensed', arial, sans;
 	font-size:1em;
-	color:white;
+	color:var(--main-text-color);
 	text-decoration:none;
 	text-align:right;
 }

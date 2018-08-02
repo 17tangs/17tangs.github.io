@@ -1,5 +1,7 @@
 html {
-    --main-bg-color: #25201B;
+    --main-bg-color: white;
+    /* #25201B; */
+    --main-text-color: black;
     --c1: #3F51B5;
     --c1Hover: #313F8C;
     --c2:#F44336;

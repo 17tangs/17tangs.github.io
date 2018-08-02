@@ -1,5 +1,6 @@
 .scheduleContainer{
-  height:62%;
+  width:72%;
+  height:100%;
   display:flex;
   justify-content:center;
   overflow:auto;

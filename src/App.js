@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import TitleRegion from './TitleRegion';
-import Schedule from './Schedule';
 import SearchBar from './SearchBar';
 import {ScheduleData} from './ScheduleData.js';
+import MainRegion from './MainRegion';
 import './animate.css';
 
 
@@ -57,7 +57,7 @@ class App extends Component {
       <div className="App" tabIndex={0} >
           <Navbar />
           <TitleRegion />
-          <Schedule sd = {filteredSchedule}/>
+          <MainRegion sd = {filteredSchedule}/>
           {this.genSearchBar()}
       </div>
     );

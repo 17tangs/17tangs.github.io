@@ -9,6 +9,6 @@
 	top: 2px;
 	right: 5px;
 	font-family: 'bebas_neueregular';
-	background-color: #25201B;
-	color: white;
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
 }
