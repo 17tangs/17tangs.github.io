@@ -26,7 +26,7 @@ class App extends Component {
       }
   }
   handleSearchBar = (event) =>{
-      if("abcdefghijklmnopqrstuvwxyz0123456789".includes(event.key)){
+      if("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".includes(event.key)){
           this.setState({showSearchBar:true});
       }
       else if (event.keyCode === 27){
@@ -56,9 +56,8 @@ class App extends Component {
     return (
       <div className="App" tabIndex={0} >
           <Navbar />
-          <TitleRegion />
+          <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
           <MainRegion sd = {filteredSchedule}/>
-          {this.genSearchBar()}
       </div>
     );
   }

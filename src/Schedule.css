@@ -1,11 +1,12 @@
 .scheduleContainer{
+  margin-right:10px;
   width:72%;
   height:100%;
   display:flex;
   justify-content:center;
-  overflow:auto;
+  overflow-y:auto;
 }
 .schedule{
-  width:905px;
+  width:100%;
   display:flex;
 }

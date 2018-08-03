@@ -9,19 +9,17 @@
 }
 
 .dayTextContainer {
-	position: relative;
-	top: 0px;
-	width: 171px;
-	height: 50px;
-	margin-left: 2px;
-	margin-right: 2px;
+    position:relative;
+    height:49px;
+    width:100%;
 }
 
 .dayText {
-    color:white;
-	position: absolute;
-	bottom: 0px;
-	left: 80px;
+    width:100%;
+    position:absolute;
+    bottom: -2px;
+    text-align:center;
+    color:var(--main-text-color);
 	font-family: 'bebas_neueregular';
 	font-size: 150%;
 }

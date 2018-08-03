@@ -29,7 +29,7 @@ class DayContainer extends Component{
     generateDays = () => {
         let dayData = this.genDayData();
         let days = ['M', 'T', 'W', 'R', 'F'];
-        let dayHTML = dayData.map((day,i) => <Day key = {i} dayText = {days[i]} slots = {day}/>);
+        let dayHTML = dayData.map((day,i) => <Day onClick = {this.props.onClick} key = {i} dayText = {days[i]} slots = {day}/>);
         return dayHTML;
     }
     render(){

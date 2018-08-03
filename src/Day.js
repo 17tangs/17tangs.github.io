@@ -4,7 +4,7 @@ import './Day.css';
 
 class Day extends Component {
     genClasses = () => {
-        return this.props.slots.map((c, i) => <Class key ={i} classData = {c}/>)
+        return this.props.slots.map((c, i) => <Class key ={i} onClick = {this.props.onClick} classData = {c}/>)
     }
     render(){
         return(
