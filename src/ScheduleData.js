@@ -104,4 +104,25 @@ const ScheduleData = [
     }]
 }
 ];
+const scheduleDetails = [
+{
+  id:1,
+  name: "MATH 131AH",
+  fullName: "Real Analysis Honors ",
+  description: "131A. Analysis. (4) Lecture, three hours; discussion, one hour. Requisites: courses 32B, 33B. Recommended: course 115A. Rigorous introduction to foundations of real analysis; real numbers, point set topology in Euclidean space, functions, continuity.",
+  textbook: "K.A. Ross, Elementary Analysis: The Theory of Calculus, 2nd Ed.",
+},{
+  id: 2,
+  name: "CS 180",
+  fullName: "Introduction to Algorithms and Complexity
+"
+},{
+
+},{
+
+},{
+
+}
+
+]
 export {ScheduleData};
