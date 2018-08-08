@@ -1,15 +1,30 @@
 .detailsContainer{
-    width:30%;
-    height:100%;
+    position: absolute;
+    width:80%;
+    height:80%;
 }
 .details{
     width:100%;
-    height:20%;
+    height:15%;
     background-color: var(--c1);
+    position:relative;
+}
+.details .headerText{
+    margin:5px;
+    position: absolute;
+    bottom:0px;
+    left: 20px;
+    background-color: rgba(0,0,0,0);
+    color: var(--main-text-color);
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 150%;
+}
+.headerText h1 {
+  margin:0px;
 }
 .text{
     width:100%;
-    height:80%;
-    background-color: var(--main-bg-color);
+    height:85%;
+    background-color:#302C2C;
 
 }

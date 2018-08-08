@@ -23,10 +23,10 @@ class Class extends Component{
         let bgc = this.state.showHidden ?  `var(--c${this.props.classData.id}Hover)` : `var(--c${this.props.classData.id})`;
         return(
             <div id = {`c${this.props.classData.id}`} className={`class ${this.state.hover}`} onClick = {this.props.onClick} onMouseOver={this.onHover} onMouseLeave={this.onHover} style = {{top: `${(this.props.classData.start-7)*50}px`, height:`${this.duration()}px`, backgroundColor:`${bgc}`}}>
-                <div className="classText" style = {{visibility:`${classTextVisibility}`}}>
+                <div id = {`c${this.props.classData.id}`} className="classText" style = {{visibility:`${classTextVisibility}`}}>
                     {this.props.classData.name}
                 </div>
-                <div className="classHidden" style = {{visibility:`${classHiddenTextVisibility}`}}>
+                <div id = {`c${this.props.classData.id}`} className="classHidden" style = {{visibility:`${classHiddenTextVisibility}`}}>
                     {this.props.classData.prof} <br></br>
                     {this.props.classData.loc} <br></br>
                 </div>

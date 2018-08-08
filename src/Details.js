@@ -4,8 +4,11 @@ import './Details.css';
 class Details extends Component{
     render(){
         return (
-            <div className = "detailsContainer">
-                <div className = "details">
+            <div className = {`detailsContainer ${this.props.cn}`}>
+                <div className = "details" style = {{backgroundColor: `var(--${this.props.id})`}}>
+                    <div className = "headerText" >
+                        <h1> MATH </h1>
+                    </div>7
                 </div>
                 <div className = "text">
                 </div>

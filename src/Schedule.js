@@ -22,7 +22,7 @@ class Schedule extends Component{
     let {sd} = this.props;
     return(
       <div className="scheduleContainer">
-        <div className="schedule" style = {{height: `${height}px`}}>
+        <div className={`schedule ${this.props.animation}`}style = {{height: `${height}px`}}>
           <HourContainer num = {numHours} />
           <DayContainer onClick = {this.props.onClick} schedule = {sd}/>
         </div>
