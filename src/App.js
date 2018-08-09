@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import TitleRegion from './TitleRegion';
 import SearchBar from './SearchBar';
-import {ScheduleData} from './ScheduleData.js';
+import {ScheduleData, detailsData} from './ScheduleData.js';
 import MainRegion from './MainRegion';
 import './animate.css';
 
@@ -57,7 +57,7 @@ class App extends Component {
       <div className="App" tabIndex={0} >
           <Navbar />
           <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
-          <MainRegion sd = {filteredSchedule}/>
+          <MainRegion sd = {filteredSchedule} dd = {detailsData}/>
       </div>
     );
   }

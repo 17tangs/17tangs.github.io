@@ -104,25 +104,62 @@ const ScheduleData = [
     }]
 }
 ];
-const scheduleDetails = [
+const detailsData = [
 {
-  id:1,
-  name: "MATH 131AH",
-  fullName: "Real Analysis Honors ",
-  description: "131A. Analysis. (4) Lecture, three hours; discussion, one hour. Requisites: courses 32B, 33B. Recommended: course 115A. Rigorous introduction to foundations of real analysis; real numbers, point set topology in Euclidean space, functions, continuity.",
-  textbook: "K.A. Ross, Elementary Analysis: The Theory of Calculus, 2nd Ed.",
+    id:1,
+    name: "MATH 131AH",
+    fullName: "Real Analysis Honors ",
+    lecture: 1,
+    section: 'a',
+    description: "131A. Analysis. (4) Lecture, three hours; discussion, one hour. Requisites: courses 32B, 33B. Recommended: course 115A. Rigorous introduction to foundations of real analysis; real numbers, point set topology in Euclidean space, functions, continuity.",
+    textbook: ["K.A. Ross, Elementary Analysis: The Theory of Calculus, 2nd Ed."],
+    professor: {name:c1prof, email:""},
+    ta: {name: "", email: ""},
+    classWebsite: "",
 },{
-  id: 2,
-  name: "CS 180",
-  fullName: "Introduction to Algorithms and Complexity
-"
+    id: 2,
+    name:"CS 35L",
+    fullName:"Software Construction Laboratory",
+    lab: 2,
+    description: "",
+    textbook: [],
+    professor: {name: c2prof, email:""},
+    ta: {name: "", email: ""},
+    classWebsite: "",
 },{
+    id: 3,
+    name:"CS M51A",
+    fullName:"Logic Design of Digital Systems",
+    lecture: 2,
+    description: "",
+    textbook: [],
+    professor: {name: c3prof, email:""},
+    ta: {name: "", email: ""},
+    classWebsite: "",
 
 },{
+    id:4,
+    name:"CS 180",
+    fullName:"Introduction to Algorithms and Complexity",
+    lecture: 1,
+    description: "",
+    textbook: [],
+    professor: {name: c4prof, email:""},
+    ta: {name: "", email: ""},
+    classWebsite: "",
 
 },{
+    id:5,
+    name:"PHYSICS 4AL",
+    fullName: "Physics Laboratory for Scientists and Engineers: Mechanics",
+    lab: 6,
+    description: "",
+    textbook: [],
+    professor: {name: c5prof, email:""},
+    ta: {name: "", email: ""},
+    classWebsite: "",
 
 }
 
 ]
-export {ScheduleData};
+export {ScheduleData, detailsData};

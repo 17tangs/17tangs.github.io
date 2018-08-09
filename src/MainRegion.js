@@ -14,7 +14,7 @@ class MainRegion extends Component {
     }
     onClick = (event) =>{
         console.log(event.target);
-        this.setState({detailsID: event.target.id, showDetails:true});
+        this.setState({detailsID: parseInt(event.target.id.substring(1),10), showDetails:true});
     }
     clickBackground = (event) => {
         if(event.target.className === 'mainRegion'){
@@ -35,6 +35,7 @@ class MainRegion extends Component {
       }
     }
     render(){
+        let data = this.props.dd.filter((subject)=>subject.id===this.state.detailsID);
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
                 <Schedule animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/>
