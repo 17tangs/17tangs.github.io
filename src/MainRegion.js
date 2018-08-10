@@ -13,7 +13,6 @@ class MainRegion extends Component {
       }
     }
     onClick = (event) =>{
-        console.log(event.target);
         this.setState({detailsID: parseInt(event.target.id.substring(1),10), showDetails:true});
     }
     clickBackground = (event) => {
@@ -27,15 +26,16 @@ class MainRegion extends Component {
       }
     }
     handleDetails = () => {
-      if(this.state.showDetails === true){
-        return <Details cn = {'animated zoomIn'} id = {this.state.detailsID}/>;
-      }
-      else{
-        return '';
-      }
+        let data = this.props.dd.filter((subject)=>subject.id===this.state.detailsID)[0];
+        console.log(data);
+        if(this.state.showDetails === true){
+            return <Details cn = {'animated zoomIn'} subjectData = {data}/>;
+        }
+        else{
+            return '';
+        }
     }
     render(){
-        let data = this.props.dd.filter((subject)=>subject.id===this.state.detailsID);
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
                 <Schedule animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/>
