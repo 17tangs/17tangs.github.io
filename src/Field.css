@@ -1,0 +1,23 @@
+.field{
+    width:100%;
+    margin-bottom:10px;
+    display:flex;
+}
+.fieldRegion{
+    width:12%;
+}
+.textRegion{
+    width:88%;
+}
+.title{
+    color: var(--h2-text-color);
+    font-weight:400;
+}
+.fieldText{
+    line-height:1.2em;
+    font-weight:300;
+}
+.linkText{
+    text-decoration: none;
+    color: var(--paragraph-text-color);
+}

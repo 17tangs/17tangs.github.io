@@ -13,7 +13,7 @@
     margin:5px;
     position: absolute;
     bottom:0px;
-    left: 20px;
+    left: 25px;
     background-color: rgba(0,0,0,0);
     color: var(--main-text-color);
     font-family: 'bebas_neueregular', sans-serif;
@@ -22,11 +22,16 @@
 .headerText h1 {
   margin:0px;
 }
+.h2Text{
+    margin:0;
+    margin-bottom:20px;
+    color: var(--h2-text-color);
+}
 .text{
-    padding: 20px;
+    padding: 30px;
     width:100%;
     height:88%;
     background-color:#302C2C;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color:var(--paragraph-text-color);
 }

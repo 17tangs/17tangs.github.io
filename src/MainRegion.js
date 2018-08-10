@@ -27,7 +27,6 @@ class MainRegion extends Component {
     }
     handleDetails = () => {
         let data = this.props.dd.filter((subject)=>subject.id===this.state.detailsID)[0];
-        console.log(data);
         if(this.state.showDetails === true){
             return <Details cn = {'animated zoomIn'} subjectData = {data}/>;
         }
