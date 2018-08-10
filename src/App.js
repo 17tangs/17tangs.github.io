@@ -12,9 +12,10 @@ class App extends Component {
   constructor(){
     super();
     this.state= {
-      schedule_data: ScheduleData,
-      searchfield: '',
-      showSearchBar: false,
+        day: '',
+        schedule_data: ScheduleData,
+        searchfield: '',
+        showSearchBar: false,
     }
   }
   onSearchChange = (event) => {
@@ -38,6 +39,13 @@ class App extends Component {
           this.setState({searchfield: '', showSearchBar:false});
       }
   }
+  hoverDay = (event) =>{
+      this.setState({day:event.target.innerHTML});
+  }
+  resetDay = () =>{
+      console.log('noHovered');
+      this.setState({day:''});
+  }
   genSearchBar = () =>{
       if (this.state.showSearchBar === true){
           return <SearchBar blur = {this.onBlur} searchChange={this.onSearchChange}/>;
@@ -50,14 +58,22 @@ class App extends Component {
       document.addEventListener("keydown", this.handleSearchBar);
   }
   render() {
-    const filteredSchedule = this.state.schedule_data.filter((subject) => {
+    let days = ['M','T','W','R','F'];
+    let filteredSchedule = this.state.schedule_data.filter((subject) => {
         return subject.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
     })
+    let filteredSchedule2 = filteredSchedule.map((subject,i) => {
+        let s = Object.assign({}, subject);
+        s.slots = s.slots.filter((slot) =>{
+            return this.state.day === '' || days.indexOf(this.state.day)+1 === slot.day
+        });
+        return s;
+    });
     return (
       <div className="App" tabIndex={0} >
           <Navbar />
           <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
-          <MainRegion sd = {filteredSchedule} dd = {detailsData}/>
+          <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
       </div>
     );
   }

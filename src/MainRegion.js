@@ -37,7 +37,7 @@ class MainRegion extends Component {
     render(){
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
-                <Schedule animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/>
+                <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay} animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/>
                 {this.handleDetails()}
             </div>
         );

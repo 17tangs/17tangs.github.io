@@ -10,7 +10,7 @@ class Day extends Component {
         return(
             <div className="day">
                 <div className="dayTextContainer">
-                    <div className="dayText">
+                    <div className="dayText" onMouseLeave = {this.props.resetDay} onMouseEnter = {this.props.hoverDay}>
                         {this.props.dayText}
                     </div>
                 </div>

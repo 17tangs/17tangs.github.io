@@ -24,7 +24,7 @@ class Schedule extends Component{
       <div className="scheduleContainer">
         <div className={`schedule ${this.props.animation}`}style = {{height: `${height}px`}}>
           <HourContainer num = {numHours} />
-          <DayContainer onClick = {this.props.onClick} schedule = {sd}/>
+          <DayContainer hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay}  onClick = {this.props.onClick} schedule = {sd}/>
         </div>
       </div>
     );
