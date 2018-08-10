@@ -21,3 +21,7 @@
     text-decoration: none;
     color: var(--paragraph-text-color);
 }
+.linkText:hover{
+    font-weight:bold;
+    color :var(--main-text-color);
+}

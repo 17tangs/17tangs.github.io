@@ -144,7 +144,7 @@ const detailsData = [
     lecture: 1,
     Description: "Lecture, four hours; discussion, two hours; outside study, six hours. Enforced requisites: course 32, Mathematics 61. Designed for junior/senior Computer Science majors. Introduction to design and analysis of algorithms. Design techniques: divide-and-conquer, greedy method, dynamic programming; selection of prototypical algorithms; choice of data structures and representations; complexity measures: time, space, upper, lower bounds, asymptotic complexity; NP-completeness. Letter grading.",
     Textbook: ["Kleinberg, Algorithm Design, 1st Edition"],
-    Professor: [{name: c4prof, email:"mailto:majid@cs.ucla.edu"}],
+    Professor: [{name: c4prof, email:"mailto:majid@cs.ucla.edu"}, {name: c3prof, email:"mailto:milos@cs.ucla.edu"}],
     TA: [],
     ClassWebsite: "https://ccle.ucla.edu/course/view/18F-COMSCI180-1",
 
