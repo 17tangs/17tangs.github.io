@@ -52,15 +52,13 @@ class Field extends Component{
                             <span className = "title"><b>{this.props.title}: </b></span>
                         </div>
                         <div className = "textRegion fieldText">
-                            <ul style = {{margin:0, paddingLeft:0,listStylePosition:`inside`}}>
                                 {this.props.text.map((item,i) =>
-                                    <li key = {i} >
+                                    <div>
                                         <div key = {i} className = {this.state.linkAnimations[i]} onMouseLeave = {this.resetHover} onMouseEnter = {this.handleHover} style={{display:"inline-block"}}>
                                             <a id = {i} className = "linkText" href = {this.props.link[i]} target="_blank">{item}</a>
-                                        </div>
-                                    </li>
+                                        </div><br></br>
+                                    </div>
                                 )}
-                            </ul>
                         </div>
                     </div>
                 )
