@@ -1,6 +1,6 @@
 import React, { Component } from  'react';
-import HourContainer from './HourContainer';
-import DayContainer from './DayContainer';
+import HourContainer from './HourContainer/HourContainer';
+import DayContainer from './DayContainer/DayContainer';
 import './Schedule.css'
 
 class Schedule extends Component{

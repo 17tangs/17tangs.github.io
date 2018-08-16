@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './TitleRegion.css';
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 
 class TitleRegion extends Component{
   genSearchBar = () =>{

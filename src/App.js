@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './Navbar';
-import TitleRegion from './TitleRegion';
-import SearchBar from './SearchBar';
+import Navbar from './Navbar/Navbar';
+import TitleRegion from './TitleRegion/TitleRegion';
+import SearchBar from './TitleRegion/SearchBar/SearchBar';
 import {ScheduleData, detailsData} from './ScheduleData.js';
-import MainRegion from './MainRegion';
-import './animate.css';
+import MainRegion from './MainRegion/MainRegion';
+import './resources/animate.css';
 
 
 class App extends Component {

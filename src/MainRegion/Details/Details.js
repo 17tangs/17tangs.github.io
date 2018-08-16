@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Details.css';
-import Field from './Field';
+import Field from './Field/Field';
 
 class Details extends Component{
     generateFields = () => {

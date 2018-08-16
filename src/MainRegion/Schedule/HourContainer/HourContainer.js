@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Hour from './Hour'
+import Hour from './Hour/Hour'
 import './HourContainer.css'
 
 class HourContainer extends Component{

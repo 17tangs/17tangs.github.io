@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './MainRegion.css';
-import Schedule from './Schedule';
-import Details from './Details';
+import Schedule from './Schedule/Schedule';
+import Details from './Details/Details';
 
 class MainRegion extends Component {
     constructor(){
