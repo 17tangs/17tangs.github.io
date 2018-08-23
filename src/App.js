@@ -57,25 +57,48 @@ class App extends Component {
   componentWillMount(){
       document.addEventListener("keydown", this.handleSearchBar);
   }
+  getElements = () =>{
+      return {
+                nodes: [
+                    { data: { id: 'cat' } },
+                    { data: { id: 'bird' } },
+                    { data: { id: 'ladybug' } },
+                    { data: { id: 'aphid' } },
+                    { data: { id: 'rose' } },
+                    { data: { id: 'grasshopper' } },
+                    { data: { id: 'plant' } },
+                    { data: { id: 'wheat' } }
+                ],
+                edges: [
+                    { data: { source: 'cat', target: 'bird', } },
+                    { data: { source: 'bird', target: 'ladybug' } },
+                    { data: { source: 'bird', target: 'grasshopper' } },
+                    { data: { source: 'grasshopper', target: 'plant' } },
+                    { data: { source: 'grasshopper', target: 'wheat' } },
+                    { data: { source: 'ladybug', target: 'aphid' } },
+                    { data: { source: 'aphid', target: 'rose' } }
+                ]
+            };
+  }
   render() {
-    let days = ['M','T','W','R','F'];
-    let filteredSchedule = this.state.schedule_data.filter((subject) => {
-        return subject.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
-    })
-    let filteredSchedule2 = filteredSchedule.map((subject,i) => {
-        let s = Object.assign({}, subject);
-        s.slots = s.slots.filter((slot) =>{
-            return this.state.day === '' || days.indexOf(this.state.day)+1 === slot.day
-        });
-        return s;
-    });
-    return (
-      <div className="App" tabIndex={0} >
-          <Navbar />
-          <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
-          <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
-      </div>
-    );
+      let days = ['M','T','W','R','F'];
+      let filteredSchedule = this.state.schedule_data.filter((subject) => {
+          return subject.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+      })
+      let filteredSchedule2 = filteredSchedule.map((subject,i) => {
+          let s = Object.assign({}, subject);
+          s.slots = s.slots.filter((slot) =>{
+              return this.state.day === '' || days.indexOf(this.state.day)+1 === slot.day
+          });
+          return s;
+      });
+      return (
+          <div className="App" tabIndex={0} >
+              <Navbar />
+              <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
+              <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
+          </div>
+        );
   }
 }
 

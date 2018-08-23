@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './MainRegion.css';
 import Schedule from './Schedule/Schedule';
 import Details from './Details/Details';
+import DependencyGraph from './DependencyGraph/DependencyGraph'
 
 class MainRegion extends Component {
     constructor(){
@@ -37,8 +38,9 @@ class MainRegion extends Component {
     render(){
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
-                <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay} animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/>
-                {this.handleDetails()}
+                <DependencyGraph/>
+                {/* <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay} animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/> */}
+                {/* {this.handleDetails()} */}
             </div>
         );
     }
