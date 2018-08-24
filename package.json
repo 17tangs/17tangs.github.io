@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "cytoscape": "^3.2.16",
+    "cytoscape-cola": "^2.2.3",
+    "cytoscape-cose-bilkent": "^4.0.0",
+    "cytoscape-euler": "^1.2.1",
+    "cytoscape-klay": "^3.1.1",
     "googleapis": "^27.0.0",
     "react": "^16.4.1",
     "react-cytoscape": "^1.0.6",
