@@ -10,7 +10,6 @@ class MainRegion extends Component {
       this.state = {
         detailsID: '',
         showDetails : false,
-        slideSchedule : 'animated zoomIn'
       }
     }
     onClick = (event) =>{
@@ -38,9 +37,9 @@ class MainRegion extends Component {
     render(){
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
-                <DependencyGraph/>
-                {/* <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay} animation = {this.state.slideSchedule} onClick = {this.onClick} sd = {this.props.sd}/> */}
-                {/* {this.handleDetails()} */}
+                {/* <DependencyGraph/> */}
+                <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay}  onClick = {this.onClick} sd = {this.props.sd}/>
+                {this.handleDetails()}
             </div>
         );
     }

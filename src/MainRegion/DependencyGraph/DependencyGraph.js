@@ -159,10 +159,15 @@ class DependencyGraph extends Component {
                 ]
             };
         const cys = cytoscape(conf);
+        var node = '';
         cys.on('mouseover', 'node', function(evt){
-          var node = evt.target;
-          console.log( 'tapped ' + node.id() );
+          node = evt.target.id();
+          cys.elements(`edge[source = "${node}"]`).style({
+              'line-color': 'blue',
+          })
+          console.log( 'tapped ' + node );
         });
+
         this.setState({'cy': cys})
 
         // cy.json();
@@ -249,6 +254,7 @@ class DependencyGraph extends Component {
           var node = evt.target;
           console.log( 'tapped ' + node.id() );
         });
+
         this.setState({'cy': cys})
 
         // cy.json();
@@ -261,6 +267,7 @@ class DependencyGraph extends Component {
     }
 
     render() {
+
         return <div style={cyStyle} ref={(cyRef) => {
             this.cyRef = cyRef;
         }}/>

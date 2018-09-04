@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Class from './Class/Class'
+import Fade from 'react-reveal/Fade'
 import './Day.css';
 
 class Day extends Component {
@@ -9,11 +10,13 @@ class Day extends Component {
     render(){
         return(
             <div className="day">
-                <div className="dayTextContainer">
-                    <div className="dayText" onMouseLeave = {this.props.resetDay} onMouseEnter = {this.props.hoverDay}>
-                        {this.props.dayText}
+                <Fade>
+                    <div className="dayTextContainer">
+                        <div className="dayText" onMouseLeave = {this.props.resetDay} onMouseEnter = {this.props.hoverDay}>
+                            {this.props.dayText}
+                        </div>
                     </div>
-                </div>
+                </Fade>
                 {this.genClasses()}
             </div>
         );

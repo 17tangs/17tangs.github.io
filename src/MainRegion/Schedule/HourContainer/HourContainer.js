@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Hour from './Hour/Hour'
+import Fade from 'react-reveal/Fade';
 import './HourContainer.css'
 
 class HourContainer extends Component{
@@ -13,9 +14,11 @@ class HourContainer extends Component{
   }
   render(){
     return(
+        <Fade>
         <div className="hourContainer">
           {this.generateHour()}
         </div>
+        </Fade>
     );
   }
 }
