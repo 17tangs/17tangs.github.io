@@ -11,7 +11,7 @@ const c5loc = "Knudsen 1238";
 const ScheduleData = [
   {
     id:1,
-    name: "MATH 131AH",
+    name: "Math 131AH",
     slots: [{
       start:11,
       end:12,
@@ -93,7 +93,7 @@ const ScheduleData = [
 ]
 },{
     id:5,
-    name: "PHYSICS 4AL",
+    name: "Physics 4AL",
     slots:[{
         start:12,
         end:15,
@@ -107,7 +107,7 @@ const ScheduleData = [
 const detailsData = [
 {
     id:1,
-    name: "MATH 131AH",
+    name: "Math 131AH",
     fullName: "Real Analysis Honors ",
     lecture: 1,
     section: 'a',
@@ -150,7 +150,7 @@ const detailsData = [
 
 },{
     id:5,
-    name:"PHYSICS 4AL",
+    name:"Physics 4AL",
     fullName: "Physics Laboratory for Scientists and Engineers: Mechanics",
     lab: 6,
     Description: "Laboratory, three hours. Enforced requisite: course 1A or 1AH. Enforced corequisite: course 1B or 1BH. Experiments on measuring gravity, accelerated motion, kinetic and potential energy, impulse and momentum, damped and driven oscillators, resonance and vibrating strings. Computer data acquisition and analysis. Introduction to error analysis, including distributions and least-squares fitting procedures. Letter grading.",

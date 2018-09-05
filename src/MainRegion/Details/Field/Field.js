@@ -25,7 +25,7 @@ class Field extends Component{
                 return(
                     <div className = "field">
                         <div className = "fieldRegion">
-                            <span className = "title"><b>{this.props.title}: </b></span>
+                            <span className = "title"><b>{this.props.title} </b></span>
                         </div>
                         <div className = "textRegion fieldText">
                             <ul style = {{margin:0, paddingLeft:0,listStylePosition:`inside`}}> {this.props.text.map((item,i) => <li key={i} >{item}</li>)} </ul>
@@ -36,7 +36,7 @@ class Field extends Component{
             return(
                 <div className = "field">
                     <div className = "fieldRegion">
-                        <span className = "title"><b>{this.props.title}: </b></span>
+                        <span className = "title"><b>{this.props.title} </b></span>
                     </div>
                     <div className = "textRegion">
                         <span className = "fieldText"> {this.props.text} </span>
@@ -49,7 +49,7 @@ class Field extends Component{
                 return(
                     <div className = "field">
                         <div className = "fieldRegion">
-                            <span className = "title"><b>{this.props.title}: </b></span>
+                            <span className = "title"><b>{this.props.title} </b></span>
                         </div>
                         <div className = "textRegion fieldText">
                                 {this.props.text.map((item,i) =>
@@ -66,7 +66,7 @@ class Field extends Component{
             return(
                 <div className = "field">
                     <div className = "fieldRegion">
-                        <span className = "title"><b>{this.props.title}: </b></span>
+                        <span className = "title"><b>{this.props.title} </b></span>
                     </div>
                     <div className = "textRegion fieldText" >
                         <div onMouseEnter = {this.handleHover} onMouseLeave = {this.resetHover} className = {this.state.linkAnimation} style={{display:"inline-block"}}><a className = "linkText" href={this.props.link} target="_blank">{this.props.text}</a></div>
