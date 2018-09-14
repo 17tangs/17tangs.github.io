@@ -37,7 +37,7 @@ class MainRegion extends Component {
     render(){
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
-                {/* <DependencyGraph/> */}
+                <DependencyGraph/>
                 <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay}  onClick = {this.onClick} sd = {this.props.sd}/>
                 {this.handleDetails()}
             </div>
