@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './SignIn.css';
 import Fade from 'react-reveal';
+import {Link} from 'react-router-dom';
+
+
 
 class SignIn extends Component{
     constructor(props){
@@ -12,6 +15,9 @@ class SignIn extends Component{
             passFilled: '',
             showButton: 'none',
         }
+    }
+    submit = () =>{
+        this.props.submit(true);
     }
     handleUsername = (e) =>{
         if(e.target.value.trim() !== '' && this.state.password.trim() !== ''){
@@ -98,13 +104,14 @@ class SignIn extends Component{
                         </Fade>
         			</section>
                     <Fade up>
-                        <div id="logIn" style={{display:`${this.state.showButton}`}}>Sign In</div>
+                        <div style = {{display:`${this.state.showButton}`}} onClick={this.submit}>
+                            <Link style={{color:'white', textDecoration: 'none'}} to="/" ><div id="logIn">Sign In </div></Link>
+                        </div>
                     </Fade>
                 </div>
             </div>
         )
     }
 }
-
 
 export default SignIn;

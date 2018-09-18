@@ -13,7 +13,7 @@ class Logout extends Component{
   }
   render(){
     return(
-          <a className = {"logout " + (this.state.logoutHover ? 'animated rubberBand' : '')} href="login.html" onMouseOut={this.onHover} onMouseOver={this.onHover}>
+          <a className = {"logout " + (this.state.logoutHover ? 'animated rubberBand' : '')} href="login" onMouseOut={this.onHover} onMouseOver={this.onHover}>
             Log out
           </a>
     );

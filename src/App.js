@@ -5,8 +5,8 @@ import TitleRegion from './TitleRegion/TitleRegion';
 import SearchBar from './TitleRegion/SearchBar/SearchBar';
 import {ScheduleData, detailsData} from './ScheduleData.js';
 import MainRegion from './MainRegion/MainRegion';
-import SignIn from './SignIn/SignIn';
-import './resources/animate.css';
+
+
 
 
 class App extends Component {
@@ -58,6 +58,8 @@ class App extends Component {
   componentWillMount(){
       document.addEventListener("keydown", this.handleSearchBar);
   }
+
+
   render() {
       let days = ['M','T','W','R','F'];
       let filteredSchedule = this.state.schedule_data.filter((subject) => {
@@ -72,11 +74,11 @@ class App extends Component {
       });
       return (
           <div className="App" tabIndex={0} >
-              <SignIn />
-              {/* <Navbar />
+              <Navbar />
               <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
-              <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/> */}
+              <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
           </div>
+
         );
   }
 }
