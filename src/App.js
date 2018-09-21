@@ -8,7 +8,6 @@ import MainRegion from './MainRegion/MainRegion';
 
 
 
-
 class App extends Component {
   constructor(){
     super();

@@ -6,10 +6,11 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
+  Switch,
   Redirect,
   withRouter
 } from "react-router-dom";
-
+import store from 'store';
 
 
 class Main extends Component{
@@ -26,17 +27,21 @@ class Main extends Component{
     }
 
     render(){
-        console.log(this.state.isAuth);
+        console.log(store.get('loggedIn'));
         return(
-          <Router>
-              <div style={{height:'100%', weight:'100%'}}>
-                <Route path="/login" render={
-                    (props)=> <SignIn {...props} submit = {this.submit}/>
-                }/>
-                <PrivateRoute exact path="/" component={App} auth={this.state.isAuth}/>
+            <div style={{height:'100%', weight:'100%'}}>
+                <Router>
+                    <Switch>
+                    {/* <Route path="/login" render={
+                        (props)=> <SignIn {...props} submit = {this.submit}/>
+                    }/> */}
+                        <Route path = '/login' component={SignIn}/>
+                        {/* <Route exact path='/' component={App}/> */}
+                        <PrivateRoute exact path="/" component={App} auth={this.state.isAuth}/>
 
-              </div>
-            </Router>
+                    </Switch>
+                </Router>
+            </div>
         );
     }
 }
@@ -45,11 +50,12 @@ const PrivateRoute = ({ component: Component, auth}) => {
     return(
       <Route
         render={props => {
-            return(auth ? (
+            return(store.get('loggedIn')===true ? (
               <Component {...props} />
             ) : (
               <Redirect
                 to={{pathname: "/login",
+                state: {from: props.location}
                 }}
               />
           ))
