@@ -17,30 +17,27 @@ class Main extends Component{
     constructor(props){
         super(props);
         this.state={
-            isAuth: false
+            username: '',
+            password: '',
         }
-    }
-    submit = (r) =>{
-        this.setState({
-            isAuth: r
-        })
     }
 
     render(){
         console.log(store.get('loggedIn'));
         return(
             <div style={{height:'100%', weight:'100%'}}>
-                <Router>
+                <App />
+                {/* <Router>
                     <Switch>
-                    {/* <Route path="/login" render={
+                    <Route path="/login" render={
                         (props)=> <SignIn {...props} submit = {this.submit}/>
-                    }/> */}
+                    }/>
                         <Route path = '/login' component={SignIn}/>
-                        {/* <Route exact path='/' component={App}/> */}
+                        <Route exact path='/' component={App}/>
                         <PrivateRoute exact path="/" component={App} auth={this.state.isAuth}/>
 
                     </Switch>
-                </Router>
+                </Router> */}
             </div>
         );
     }

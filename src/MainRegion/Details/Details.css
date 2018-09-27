@@ -1,13 +1,15 @@
 .detailsContainer{
+    background-color: var(--main-bg-color);
     position: absolute;
     top:0;
     width:80%;
+    border:1px solid white;
     height:100%;
 }
 .details{
     width:100%;
     height:12%;
-    background-color: var(--c1);
+    background-color: var(--c2);
     position:relative;
 }
 .details .headerText{
@@ -33,7 +35,6 @@
     padding: 30px;
     width:100%;
     height:100%;
-    background-color:#302C2C;
     font-family: "Montserrat", sans-serif;
     color:var(--paragraph-text-color);
 }

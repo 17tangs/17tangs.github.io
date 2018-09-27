@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Details.css';
 import Field from './Field/Field';
+import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
 
 class Details extends Component{
     generateFields = () => {
@@ -34,8 +36,10 @@ class Details extends Component{
                     </div>
                 </div> */}
                 <div className = "text">
-                    <h1 style={{color:`var(--c${this.props.subjectData.id})`}}> {this.props.subjectData.name}</h1>
-                    <h2 className="h2Text"> {this.props.subjectData.fullName}</h2>
+                    <Flip top>
+                        <h1 style={{color:`var(--c${this.props.subjectData.id})`}}> {this.props.subjectData.name}</h1>
+                        <h2 className="h2Text"> {this.props.subjectData.fullName}</h2>
+                    </Flip>
                     {this.generateFields()}
                 </div>
             </div>

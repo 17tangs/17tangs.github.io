@@ -70,7 +70,15 @@ const ScheduleData = [
         professor :c3prof,
         location: c3loc,
         type:"lecture",
+    },{
+        start:12,
+        end:14,
+        day:5,
+        professor :c3prof,
+        location: c3loc,
+        type:"lecture",
     }
+
 ]
 },{
     id:4,
@@ -89,6 +97,13 @@ const ScheduleData = [
         professor: c4prof,
         location: c4loc,
         type:"lecture",
+    },{
+        start:16,
+        end:18,
+        day:5,
+        professor: c4prof,
+        location: c4loc,
+        type:"lecture",
     }
 ]
 },{
@@ -103,6 +118,7 @@ const ScheduleData = [
         type:"lecture",
     }]
 }
+
 ];
 const detailsData = [
 {

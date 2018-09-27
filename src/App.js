@@ -73,9 +73,11 @@ class App extends Component {
       });
       return (
           <div className="App" tabIndex={0} >
-              <Navbar />
+              <Navbar sd = {this.state.schedule_data}/>
+              <div className="main">
               <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
               <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
+          </div>
           </div>
 
         );

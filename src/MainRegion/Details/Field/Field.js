@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Fade from 'react-reveal/Fade';
 import './Field.css';
 
 class Field extends Component{
@@ -25,10 +26,14 @@ class Field extends Component{
                 return(
                     <div className = "field">
                         <div className = "fieldRegion">
-                            <span className = "title"><b>{this.props.title} </b></span>
+                            <Fade>
+                                <span className = "title"><b>{this.props.title} </b></span>
+                            </Fade>
                         </div>
                         <div className = "textRegion fieldText">
-                            <ul style = {{margin:0, paddingLeft:0,listStylePosition:`inside`}}> {this.props.text.map((item,i) => <li key={i} >{item}</li>)} </ul>
+                            <Fade>
+                                <ul style = {{margin:0, paddingLeft:0,listStylePosition:`inside`}}> {this.props.text.map((item,i) => <li key={i} >{item}</li>)} </ul>
+                            </Fade>
                         </div>
                     </div>
                 )
@@ -36,10 +41,14 @@ class Field extends Component{
             return(
                 <div className = "field">
                     <div className = "fieldRegion">
+                            <Fade>
                         <span className = "title"><b>{this.props.title} </b></span>
+                            </Fade>
                     </div>
                     <div className = "textRegion">
+                            <Fade>
                         <span className = "fieldText"> {this.props.text} </span>
+                            </Fade>
                     </div>
                 </div>
             );
@@ -49,14 +58,18 @@ class Field extends Component{
                 return(
                     <div className = "field">
                         <div className = "fieldRegion">
+                            <Fade>
                             <span className = "title"><b>{this.props.title} </b></span>
+                            </Fade>
                         </div>
                         <div className = "textRegion fieldText">
                                 {this.props.text.map((item,i) =>
                                     <div>
+                                        <Fade>
                                         <div key = {i} className = {this.state.linkAnimations[i]} onMouseLeave = {this.resetHover} onMouseEnter = {this.handleHover} style={{display:"inline-block"}}>
                                             <a id = {i} className = "linkText" href = {this.props.link[i]} target="_blank">{item}</a>
                                         </div><br></br>
+                            </Fade>
                                     </div>
                                 )}
                         </div>
@@ -66,10 +79,14 @@ class Field extends Component{
             return(
                 <div className = "field">
                     <div className = "fieldRegion">
+                            <Fade>
                         <span className = "title"><b>{this.props.title} </b></span>
+                    </Fade>
                     </div>
                     <div className = "textRegion fieldText" >
+                        <Fade>
                         <div onMouseEnter = {this.handleHover} onMouseLeave = {this.resetHover} className = {this.state.linkAnimation} style={{display:"inline-block"}}><a className = "linkText" href={this.props.link} target="_blank">{this.props.text}</a></div>
+                    </Fade>
                     </div>
                 </div>
             );
