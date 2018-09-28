@@ -12,12 +12,29 @@ class App extends Component {
   constructor(){
     super();
     this.state= {
+        detailsID: '',
+        showDetails: false,
         day: '',
         schedule_data: ScheduleData,
         searchfield: '',
         showSearchBar: false,
     }
   }
+    onClick = (event) =>{
+        this.setState({
+            detailsID: parseInt(event.target.id.substring(1),10),
+            showDetails:true
+        });
+    }
+
+    onNavClick = (event) => {
+        this.setState({
+            detailsID: parseInt(event.target.id, 10),
+            showDetails:true
+        });
+    }
+
+
   onSearchChange = (event) => {
       if(event.target.value === ''){
           this.setState({searchfield:'', showSearchBar:false});
@@ -59,6 +76,7 @@ class App extends Component {
   }
 
 
+
   render() {
       let days = ['M','T','W','R','F'];
       let filteredSchedule = this.state.schedule_data.filter((subject) => {
@@ -73,10 +91,10 @@ class App extends Component {
       });
       return (
           <div className="App" tabIndex={0} >
-              <Navbar sd = {this.state.schedule_data}/>
+              <Navbar onNavClick = {this.onNavClick} sd = {this.state.schedule_data}/>
               <div className="main">
               <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
-              <MainRegion resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
+              <MainRegion onClick={this.onClick} detailsID = {this.state.detailsID} showDetails = {this.state.showDetails} resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
           </div>
           </div>
 

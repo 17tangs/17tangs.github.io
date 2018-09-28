@@ -6,7 +6,7 @@ class Class extends Component{
     constructor(){
         super();
         this.state = {
-            hover: "",
+            hover: '',
             showHidden:false
         }
     }

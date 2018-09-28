@@ -12,9 +12,6 @@ class MainRegion extends Component {
         showDetails : false,
       }
     }
-    onClick = (event) =>{
-        this.setState({detailsID: parseInt(event.target.id.substring(1),10), showDetails:true});
-    }
     clickBackground = (event) => {
         if(event.target.className === 'mainRegion'){
           this.setState({showDetails:false});
@@ -26,8 +23,8 @@ class MainRegion extends Component {
       }
     }
     handleDetails = () => {
-        let data = this.props.dd.filter((subject)=>subject.id===this.state.detailsID)[0];
-        if(this.state.showDetails === true){
+        let data = this.props.dd.filter((subject)=>subject.id===this.props.detailsID)[0];
+        if(this.props.showDetails === true){
             return <Details cn = '' subjectData = {data}/>;
         }
         else{
@@ -38,7 +35,7 @@ class MainRegion extends Component {
         return(
             <div onClick ={this.clickBackground} className = "mainRegion">
                 {/* <DependencyGraph/> */}
-                <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay}  onClick = {this.onClick} sd = {this.props.sd}/>
+                <Schedule hoverDay = {this.props.hoverDay} resetDay = {this.props.resetDay}  onClick = {this.props.onClick} sd = {this.props.sd}/>
                 {this.handleDetails()}
             </div>
         );

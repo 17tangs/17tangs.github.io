@@ -24,7 +24,7 @@ class Navbar extends Component{
         this.props.sd.forEach((c,i) => {
             s.push(<div className="navC" >
                         <div className="dotContainer">
-                            <div id = {c.id} onMouseOver={this.handleHover} onMouseOut = {this.handleHover} className={`dot ${this.state.dotHover[i]}`} style={{backgroundColor:`var(--c${c.id})`}}/>
+                            <div id = {c.id} onClick = {this.props.onNavClick} onMouseOver={this.handleHover} onMouseOut = {this.handleHover} className={`dot ${this.state.dotHover[i]}`} style={{backgroundColor:`var(--c${c.id})`}}/>
                         </div>
                         <Fade left>
                         <div className="navText" style={{display: this.state.dotHover[i] ==='dotGrow' ? 'block' : 'none'}}>

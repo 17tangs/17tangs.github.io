@@ -36,10 +36,8 @@ class Details extends Component{
                     </div>
                 </div> */}
                 <div className = "text">
-                    <Flip top>
-                        <h1 style={{color:`var(--c${this.props.subjectData.id})`}}> {this.props.subjectData.name}</h1>
-                        <h2 className="h2Text"> {this.props.subjectData.fullName}</h2>
-                    </Flip>
+                    <h1 style={{color:`var(--c${this.props.subjectData.id})`}}> {this.props.subjectData.name}</h1>
+                    <h2 className="h2Text"> {this.props.subjectData.fullName}</h2>
                     {this.generateFields()}
                 </div>
             </div>
