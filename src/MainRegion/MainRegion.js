@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MainRegion.css';
 import Schedule from './Schedule/Schedule';
 import Details from './Details/Details';
-// import DependencyGraph from './DependencyGraph/DependencyGraph'
+import DependencyGraph from './DependencyGraph/DependencyGraph'
 
 class MainRegion extends Component {
     constructor(){
@@ -24,7 +24,7 @@ class MainRegion extends Component {
     }
     handleDetails = () => {
         let data = this.props.dd.filter((subject)=>subject.id===this.props.detailsID)[0];
-        if(this.props.showDetails === true){
+        if(this.pros.showDetails === true){
             return <Details cn = '' subjectData = {data}/>;
         }
         else{

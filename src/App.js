@@ -33,6 +33,12 @@ class App extends Component {
             showDetails:true
         });
     }
+    onHomeClick = (event) =>{
+        console.log('hi')
+        this.setState({
+            showDetails: false
+        })
+    }
 
 
   onSearchChange = (event) => {
@@ -91,7 +97,7 @@ class App extends Component {
       });
       return (
           <div className="App" tabIndex={0} >
-              <Navbar onNavClick = {this.onNavClick} sd = {this.state.schedule_data}/>
+              <Navbar onHomeClick = {this.onHomeClick} onNavClick = {this.onNavClick} sd = {this.state.schedule_data}/>
               <div className="main">
               <TitleRegion onBlur = {this.onBlur} onSearchChange = {this.onSearchChange} showSearchBar = {this.state.showSearchBar} />
               <MainRegion onClick={this.onClick} detailsID = {this.state.detailsID} showDetails = {this.state.showDetails} resetDay = {this.resetDay}  hoverDay = {this.hoverDay} sd = {filteredSchedule2} dd = {detailsData}/>
