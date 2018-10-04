@@ -24,7 +24,7 @@ class MainRegion extends Component {
     }
     handleDetails = () => {
         let data = this.props.dd.filter((subject)=>subject.id===this.props.detailsID)[0];
-        if(this.pros.showDetails === true){
+        if(this.props.showDetails === true){
             return <Details cn = '' subjectData = {data}/>;
         }
         else{

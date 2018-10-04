@@ -58,6 +58,7 @@ class SignIn extends Component{
                 showButton: 'none',
             })
         }
+        store.set('username', e.target.value);
         this.setState({
             email: e.target.value,
         })
@@ -73,6 +74,7 @@ class SignIn extends Component{
                 showButton: 'none',
             })
         }
+        store.set('password', e.target.value);
         this.setState({
             password: e.target.value,
         })
@@ -105,14 +107,15 @@ class SignIn extends Component{
     render(){
         const {error} = this.state;
         let show = 'none';
-        if(this.props.location.state){
-            show = 'none';
+        console.log(this.props.location.error);
+        if(this.props.location.error === true){
+            console.log('hi')
+            show = 'block';
         }
-        const { from } = this.props.location.state || { from: { pathname: "/" } };
-        console.log('redirect: ' + this.state.redirect);
-        if (this.state.redirect) {
-          return <Redirect to={from} />;
-        }
+        // const { from } = this.props.location.state || { from: { pathname: "/" } };
+        // if (this.state.redirect) {
+        //   return <Redirect to={from} />;
+        // }
 
         return(
             <div className="signIn">
@@ -140,9 +143,10 @@ class SignIn extends Component{
             				</span>
                         </Fade>
         			</section>
-                    {error &&  <p style={{'color': 'red'}}> Invalid credentials </p>}
+                     <p style={{'display':`${show}`, 'color': 'red'}}> Invalid credentials </p>
                     <Fade up>
-                        <div style = {{display:`${this.state.showButton}`}} onClick={this.submit}>
+                        <div style = {{display:`${this.state.showButton}`}} >
+                            {/* onClick={this.submit}> */}
                             <Link style={{color:'white', textDecoration: 'none'}} to="/" ><div id="logIn">Sign In </div></Link>
                         </div>
                     </Fade>

@@ -23,36 +23,33 @@ class Main extends Component{
     }
 
     render(){
-        console.log(store.get('loggedIn'));
         return(
             <div style={{height:'100%', weight:'100%'}}>
-                <App />
-                {/* <Router>
+                {/* <App /> */}
+                <Router>
                     <Switch>
-                    <Route path="/login" render={
-                        (props)=> <SignIn {...props} submit = {this.submit}/>
-                    }/>
-                        <Route path = '/login' component={SignIn}/>
-                        <Route exact path='/' component={App}/>
-                        <PrivateRoute exact path="/" component={App} auth={this.state.isAuth}/>
-
+                        <Route path="/login" render={
+                            (props)=> <SignIn {...props} submit = {this.submit}/>
+                        }/>
+                        <PrivateRoute exact path="/" component={App}/>
                     </Switch>
-                </Router> */}
+                </Router>
             </div>
         );
     }
 }
 
-const PrivateRoute = ({ component: Component, auth}) => {
+const PrivateRoute = ({ component: Component}) => {
     return(
       <Route
         render={props => {
-            return(store.get('loggedIn')===true ? (
+            return(store.get('username') === 'samtang1430' ? (
               <Component {...props} />
             ) : (
               <Redirect
                 to={{pathname: "/login",
-                state: {from: props.location}
+                state: {from: props.location},
+                error: true,
                 }}
               />
           ))
