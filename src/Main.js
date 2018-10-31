@@ -25,15 +25,15 @@ class Main extends Component{
     render(){
         return(
             <div style={{height:'100%', weight:'100%'}}>
-                {/* <App /> */}
-                <Router>
+                <App />
+                {/* <Router>
                     <Switch>
                         <Route path="/login" render={
                             (props)=> <SignIn {...props} submit = {this.submit}/>
                         }/>
                         <PrivateRoute exact path="/" component={App}/>
                     </Switch>
-                </Router>
+                </Router> */}
             </div>
         );
     }
